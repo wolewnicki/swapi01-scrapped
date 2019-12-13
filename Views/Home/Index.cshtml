@@ -1,5 +1,7 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using swapi01.Controllers
+@using swapi01.Models
+@{
+    var person = ViewData["Person"] as Person;
 }
 
 <div class="text-center">
@@ -8,4 +10,14 @@
     <button>Submit</button>
     </form>
     <p>This is a Test to Index the <a href="https://swapi.co">Star Wars API</a></p>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>@person.Name</td>
+            <td>@person.Age</td>
+        </tr>
+    </table>
 </div>
